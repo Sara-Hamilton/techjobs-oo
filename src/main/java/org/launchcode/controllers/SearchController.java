@@ -32,7 +32,7 @@ public class SearchController {
 
         ArrayList<Job> jobs;
 
-        if (searchForm.getSearchField().equals(JobFieldType.ALL)) {
+        if (searchForm.getSearchField().equals(JobFieldType.ALL) || searchForm.getKeyword() == null) {
             jobs = jobData.findByValue(searchForm.getKeyword());
         } else {
             jobs = jobData.findByColumnAndValue(searchForm.getSearchField(), searchForm.getKeyword());

@@ -41,7 +41,7 @@ public class Job {
     }
 
     public Employer getEmployer() {
-        return employer;
+         return employer;
     }
 
     public void setEmployer(Employer employer) {
