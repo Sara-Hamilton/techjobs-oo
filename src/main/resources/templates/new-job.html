@@ -12,8 +12,8 @@
 
         <div class="form-group">
             <label th:for="name">Name</label>
-            <input required="true" th:field="*{name}" />
-            <div th:errors="*{name}"></div>
+            <input th:field="*{name}" />
+            <div th:errors="*{name}" class="error"></div>
         </div>
 
         <div class="form-group">
@@ -29,7 +29,7 @@
 
         <div class="form-group">
             <label th:for="location">Location</label>
-            <select th:field="*{locations}">
+            <select th:field="*{location}">
                 <option th:each="location : *{locations}"
                         th:value="${location}"
                         th:text="${location.value}"></option>
@@ -38,7 +38,7 @@
 
         <div class="form-group">
             <label th:for="coreCompetency">Skill</label>
-            <select th:field="*{coreCompetencies}">
+            <select th:field="*{coreCompetency}">
                 <option th:each="coreCompetency : *{coreCompetencies}"
                         th:value="${coreCompetency}"
                         th:text="${coreCompetency.value}"></option>
@@ -47,7 +47,7 @@
 
         <div class="form-group">
             <label th:for="positionType">Position Type</label>
-            <select th:field="*{positionTypes}">
+            <select th:field="*{positionType}">
                 <option th:each="positionType : *{positionTypes}"
                         th:value="${positionType}"
                         th:text="${positionType.value}"></option>
